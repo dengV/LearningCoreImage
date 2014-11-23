@@ -48,7 +48,12 @@ func singleFilter(image: CIImage) -> CIImage {
 }
 
 func filterChain(image: CIImage) -> CIImage {
-    return CIImage()
+    let filters = image.autoAdjustmentFilters() as [CIFilter]
+    let output = filters.reduce(image, combine: { (input, filter) -> CIImage in
+        filter.setValue(input, forKey: kCIInputImageKey)
+        return filter.outputImage
+    })
+    return output
 }
 
 func customFilter(image: CIImage) -> CIImage {
