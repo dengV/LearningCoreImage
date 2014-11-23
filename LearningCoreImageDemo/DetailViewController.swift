@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreImage
 
 class DetailViewController: UIViewController {
 
@@ -25,10 +26,31 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    typealias Filter = CIImage -> CIImage
+
+    let filters = [singleFilter, filterChain, customFilter]
+
     @IBAction func processImage(sender: UIButton) {
         sender.enabled = false
 
+        let inputImage = CIImage(CGImage: imageView.image?.CGImage)
+        let outputImage = filters[rowIndex](inputImage)
+        imageView.image = UIImage(CIImage: outputImage)
     }
 
 }
 
+func singleFilter(image: CIImage) -> CIImage {
+    let filter = CIFilter(name: "CISepiaTone")
+    filter.setValue(image, forKey: kCIInputImageKey)
+    filter.setValue(NSNumber(float: 1.0), forKey: kCIInputIntensityKey)
+    return filter.outputImage
+}
+
+func filterChain(image: CIImage) -> CIImage {
+    return CIImage()
+}
+
+func customFilter(image: CIImage) -> CIImage {
+    return CIImage()
+}
