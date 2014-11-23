@@ -57,5 +57,7 @@ func filterChain(image: CIImage) -> CIImage {
 }
 
 func customFilter(image: CIImage) -> CIImage {
-    return CIImage()
+    let filter = MotionBlurFilter()
+    filter.setValue(image, forKey: kCIInputImageKey)
+    return filter.outputImage
 }

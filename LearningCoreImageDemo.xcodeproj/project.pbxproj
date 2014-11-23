@@ -14,6 +14,7 @@
 		1F10C2F81A218F50007E8DC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C2F71A218F50007E8DC8 /* Images.xcassets */; };
 		1F10C2FB1A218F50007E8DC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F10C2F91A218F50007E8DC8 /* LaunchScreen.xib */; };
 		1F10C3071A218F50007E8DC8 /* LearningCoreImageDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F10C3061A218F50007E8DC8 /* LearningCoreImageDemoTests.swift */; };
+		1FB53D4E1A2221C900B5B61C /* MotionBlurFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FB53D4D1A2221C900B5B61C /* MotionBlurFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1F10C3001A218F50007E8DC8 /* LearningCoreImageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningCoreImageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F10C3051A218F50007E8DC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F10C3061A218F50007E8DC8 /* LearningCoreImageDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningCoreImageDemoTests.swift; sourceTree = "<group>"; };
+		1FB53D4D1A2221C900B5B61C /* MotionBlurFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionBlurFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1F10C2EE1A218F50007E8DC8 /* AppDelegate.swift */,
 				1F10C2F01A218F50007E8DC8 /* MasterViewController.swift */,
 				1F10C2F21A218F50007E8DC8 /* DetailViewController.swift */,
+				1FB53D4D1A2221C900B5B61C /* MotionBlurFilter.swift */,
 				1F10C2F41A218F50007E8DC8 /* Main.storyboard */,
 				1F10C2F71A218F50007E8DC8 /* Images.xcassets */,
 				1F10C2F91A218F50007E8DC8 /* LaunchScreen.xib */,
@@ -217,6 +220,7 @@
 			files = (
 				1F10C2F31A218F50007E8DC8 /* DetailViewController.swift in Sources */,
 				1F10C2F11A218F50007E8DC8 /* MasterViewController.swift in Sources */,
+				1FB53D4E1A2221C900B5B61C /* MotionBlurFilter.swift in Sources */,
 				1F10C2EF1A218F50007E8DC8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				1F10C30C1A218F50007E8DC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F10C30D1A218F50007E8DC8 /* Build configuration list for PBXNativeTarget "LearningCoreImageDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				1F10C30F1A218F50007E8DC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
