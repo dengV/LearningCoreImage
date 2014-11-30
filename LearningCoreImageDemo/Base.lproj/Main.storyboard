@@ -56,11 +56,49 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz"/>
+                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
+                        <barButtonItem key="rightBarButtonItem" title="Live Filter" id="CHh-jd-pmD">
+                            <connections>
+                                <segue destination="pMv-JB-eKQ" kind="show" identifier="ShowLiveFilter" id="9c3-UY-XhR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="605" y="64"/>
+        </scene>
+        <!--Live Filter-->
+        <scene sceneID="hV8-bf-5Dh">
+            <objects>
+                <viewController title="Live Filter" id="pMv-JB-eKQ" customClass="LiveFilterViewController" customModule="LearningCoreImageDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dX5-Fz-kJT"/>
+                        <viewControllerLayoutGuide type="bottom" id="t5L-JI-GwB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EcR-cu-Sn8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZU-WZ-2Hg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </glkView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NZU-WZ-2Hg" firstAttribute="leading" secondItem="EcR-cu-Sn8" secondAttribute="leading" id="Mzf-vQ-3aS"/>
+                            <constraint firstAttribute="trailing" secondItem="NZU-WZ-2Hg" secondAttribute="trailing" id="RkZ-GP-Vxr"/>
+                            <constraint firstItem="NZU-WZ-2Hg" firstAttribute="bottom" secondItem="t5L-JI-GwB" secondAttribute="top" id="eF2-4z-qHU"/>
+                            <constraint firstItem="NZU-WZ-2Hg" firstAttribute="top" secondItem="EcR-cu-Sn8" secondAttribute="top" id="x9x-JU-OHh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="glView" destination="NZU-WZ-2Hg" id="6qQ-gF-vBg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5x9-cx-tCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605" y="742"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -110,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="83"/>
+            <point key="canvasLocation" x="1334" y="64"/>
         </scene>
     </scenes>
 </document>
