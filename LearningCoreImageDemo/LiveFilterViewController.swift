@@ -50,7 +50,7 @@ class LiveFilterViewController: UIViewController, AVCaptureVideoDataOutputSample
 
         let videoOutput = AVCaptureVideoDataOutput()
         videoOutput.alwaysDiscardsLateVideoFrames = true
-        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey: NSNumber(integer: kCVPixelFormatType_32BGRA)]
+        videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey: kCVPixelFormatType_32BGRA]
         videoOutput.setSampleBufferDelegate(self, queue: sessionQueue)
         session.addOutput(videoOutput)
 

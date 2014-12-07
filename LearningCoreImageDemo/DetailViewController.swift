@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
 func singleFilter(image: CIImage) -> CIImage {
     let filter = CIFilter(name: "CISepiaTone")
     filter.setValue(image, forKey: kCIInputImageKey)
-    filter.setValue(NSNumber(float: 1.0), forKey: kCIInputIntensityKey)
+    filter.setValue(1.0, forKey: kCIInputIntensityKey)
     return filter.outputImage
 }
 
